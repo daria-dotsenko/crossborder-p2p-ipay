@@ -1,5 +1,5 @@
-.crossborder__input-data .form-label {
-  left: 2rem;
+.crossborder__arrow {
+  margin-top: 2.5rem;
 }
 
 .crossborder__border {
@@ -19,12 +19,38 @@
   margin-bottom: 0;
 }
 
-.launch-card {
-  padding: 1rem;
+.crossborder__cards {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.crossborder__cards::before {
+  position: absolute;
+  content: "";
+  transform: rotate(90deg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 0.25rem;
+  background-image: url("../img/menu-catalogue.png");
+  background-size: 169px;
+  background-position: -122px -49px;
+}
+
+.accordion .btn {
+  padding: 1.5rem 0;
+}
+
+.btn:focus {
+  box-shadow: none;
 }
 
 @media screen and (min-width: 992px) {
   .bank-card {
     max-width: 100%;
+  }
+
+  .crossborder__questions h2 {
+    text-align: center;
   }
 }
