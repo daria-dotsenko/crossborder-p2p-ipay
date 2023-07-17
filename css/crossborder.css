@@ -152,6 +152,34 @@
   box-shadow: none;
 }
 
+.lorem-text p {
+  margin-bottom: 0rem;
+}
+
+.lorem-text ul {
+  margin-top: 0.5rem;
+}
+
+.list--circle.small--circle li::before {
+  top: 8px;
+  width: 4px;
+  height: 4px;
+}
+
+.list--minus.small--minus li::before {
+  top: 8px;
+  width: 6px;
+  height: 1px;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.list.small--circle li, .list.small--minus li {
+  padding-left: 0.75rem;
+}
+
 @media screen and (max-width: 575px) {
   .bank-card__body {
     padding-top: 2rem;
