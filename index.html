@@ -258,239 +258,254 @@
     <!-- breadcrumb widget -->
     <!-- main area -->
     <main class="p2p-crossborder" id="p2p-new-widget">
-      <!-- todo як обирати неймінг для секцій? -->
       <div class="container mb-3">
         <div class="row">
           <div class="col-12">
-            <h1 class="my-lg-1 mt-4">Международные переводы с карты на карту</h1>
+            <h1 class="my-lg-0 mt-3">Международные переводы с карты на карту</h1>
             <p class="mb-0">Переводите деньги из-за рубежа в Украину и из Украины в Европу и мир.</p>
           </div>
           <div class="col-12 mt-4">
             <form action="/">
               <div class="row justify-content-between">
                 <div class="col-lg-5">
-                  <p class="p2p__card-title">Отправить из</p>
-                  <div class="form-group select-input-wrapper" data-label="Польша">
-                    <select class="select-search form-control form-input js-example-basic-single" name="select">
-                      <option value=""></option>
-                      <option value="1">Чехия</option>
-                      <option value="2">Франция</option>
-                      <option value="3"></option>
-                      <option value="4"></option>
-                      <option value="5"></option>
-                      <option value="6"></option>
-                      <option value="7"></option>
-                    </select>
-                  </div>
-                  <!-- todo як тут перебити стилі p2p main? -->
-                  <div class="bank-card">
-                    <div class="bank-card__header">
-                      <div class="bank-card__bank"></div>
-                      <div class="bank-card__type">
-                        <img src="img/banks/mastercard.png" alt="mastercard">
+                  <div class="crossborder__card-wrapper">
+                    <h3 class="d-sm-none d-block mb-3">С карты</h3>
+                    <div class="d-none d-sm-block">
+                      <h4>Отправить из</h4>
+                      <div class="form-group select-input-wrapper" data-label="Польша">
+                        <select class="select-search form-control form-input js-example-basic-single" name="select">
+                          <option value=""></option>
+                          <option value="1">Чехия</option>
+                          <option value="2">Франция</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="bank-card__body">
-                      <div class="bank-card__number">
+                    <div class="bank-card">
+                      <div class="bank-card__header">
+                        <div class="bank-card__bank">
+                          <!-- todo бачила на іншій сторінці, що для мобільної версії реалізовано модальне вікно із вибором, тут так само зробити? -->
+                          <!-- todo якщо ні, то як змінити ширину випадаючого списку? -->
+                          <div class="d-sm-none d-block form-group select-input-wrapper" data-label="Польша">
+                            <select class="select-search form-control form-input js-example-basic-single" name="select">
+                              <option value=""></option>
+                              <option value="1">Чехия</option>
+                              <option value="2">Франция</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="bank-card__type">
+                          <img src="img/banks/mastercard.png" alt="mastercard">
+                        </div>
+                      </div>
+                      <div class="bank-card__body">
+                        <div class="bank-card__number">
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="card-number" name="name"
+                              autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                            <label class="control-label form-label" for="card-number">Номер карты</label>
+                            <div class="help-block"></div>
+                          </div>
+                        </div>
+                        <div class="bank-card__card-data">
+                          <div class="form-group bank-card__expires">
+                            <input type="text" class="form-control form-input" id="card-expires" name="name"
+                              autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                            <label class="control-label form-label" for="card-expires">Срок действия</label>
+                            <div class="help-block"></div>
+                          </div>
+                          <div class="form-group bank-card__cvv">
+                            <input type="tel" class="form-control form-input input-cvv" id="card-cvv" name="name"
+                              autocomplete="off" placeholder="***" aria-required="true">
+                            <label class="control-label form-label" for="card-cvv">CVV</label>
+                            <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover"
+                              data-toggle="popover" data-title="CVV"
+                              data-content="Трехзначный код на оборотной стороне банковской карты"></a>
+                            <div class="help-block"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="transfer-card mt-3">
+                      <div class="row col-pad8">
+                        <div class="col-8">
+                          <div class="form-group has-success">
+                            <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-success"
+                              name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100">
+                            <label class="control-label form-label" for="form-icon-r-success">Сумма перевода</label>
+                          </div>
+                        </div>
+                        <!-- todo як повертати значення яке було вказано у data-label? -->
+                        <div class="col-4">
+                          <div class="form-group select-input-wrapper" data-label="EUR">
+                            <select class="form-control form-input js-example-basic-single" name="select">
+                              <option value=""></option>
+                              <option value="1">USD</option>
+                              <option value="2">PLN</option>
+                            </select>
+                          </div>
+
+                        </div>
+                        <!-- todo відносно чого позиціонувати знак питання? -->
+                        <p class="px-2">Будет списано: <span>106.00 EUR</span></p>
+                        <a role="button" tabindex="-1"
+                          class="transfer-card-button question-popover" data-toggle="popover"
+                          data-content="Комиссия за перевод составляет 1,5% + 40 грн (минимально - эквивалент 2 EUR) от суммы перевода."
+                          data-placement="top" data-original-title="" title=""></a>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-lg-6 col-md-12">
+                        <h4 class="mb-0">Данные отправителя</h4>
+                      </div>
+                      <div class="col-lg-6 col-md-12 text-lg-right">
+                        <i class="main-blue-color">Заполнять латиницей</i>
+                      </div>
+                    </div>
+                    <div class="row col-pad8 mt-3">
+                      <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                          <input type="tel" class="form-control form-input" id="card-number" name="name"
-                            autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                          <label class="control-label form-label" for="card-number">Номер карты</label>
-                          <div class="help-block"></div>
+                          <input type="text" class="form-control form-input" id="form-name-sender" name="name"
+                            autocomplete="off"
+                            placeholder="Имя" aria-required="true">
+                          <label class="control-label form-label" for="form-name-sender">Имя</label>
                         </div>
                       </div>
-                      <div class="bank-card__card-data">
-                        <div class="form-group bank-card__expires">
-                          <input type="text" class="form-control form-input" id="card-expires" name="name"
-                            autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                          <label class="control-label form-label" for="card-expires">Срок действия</label>
-                          <div class="help-block"></div>
-                        </div>
-                        <div class="form-group bank-card__cvv">
-                          <input type="tel" class="form-control form-input input-cvv" id="card-cvv" name="name"
-                            autocomplete="off" placeholder="***" aria-required="true">
-                          <label class="control-label form-label" for="card-cvv">CVV</label>
-                          <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover"
-                            data-toggle="popover" data-title="CVV"
-                            data-content="Трехзначный код на оборотной стороне банковской карты"></a>
-                          <div class="help-block"></div>
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-surname-sender" name="surname"
+                            autocomplete="off"
+                            placeholder="Фамилия" aria-required="true">
+                          <label class="control-label form-label" for="form-surname-sender">Фамилия</label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="transfer-card mt-3">
-                    <div class="row col-pad8">
-                      <div class="col-8">
-                        <div class="form-group has-success">
-                          <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-success"
-                            name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100">
-                          <label class="control-label form-label" for="form-icon-r-success">Сумма перевода</label>
+                      <div class="col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-city-sender" name="city"
+                            autocomplete="off"
+                            placeholder="Город" aria-required="true">
+                          <label class="control-label form-label" for="form-city-sender">Город</label>
                         </div>
                       </div>
-                      <!-- todo як повертати значення яке було вказано у data-label? -->
-                      <div class="col-4">
-                        <div class="form-group select-input-wrapper" data-label="EUR">
-                          <select class="form-control form-input js-example-basic-single" name="select">
-                            <option value=""></option>
-                            <option value="1">USD</option>
-                            <option value="2">PLN</option>
-                          </select>
+                      <div class="col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-index-sender" name="index"
+                            autocomplete="off"
+                            placeholder="Индекс" aria-required="true">
+                          <label class="control-label form-label" for="form-index-sender">Индекс</label>
                         </div>
                       </div>
-                    </div>
-                    <!-- todo відносно чого позиціонувати знак питання? -->
-                    <p class="px-2">Будет списано: <span>106.00 EUR</span></p>
-                    <a role="button" tabindex="-1"
-                      class="transfer-card-button question-popover" data-toggle="popover"
-                      data-content="Комиссия за перевод составляет 1,5% + 40 грн (минимально - эквивалент 2 EUR) от суммы перевода."
-                      data-placement="top" data-original-title="" title=""></a>
-                  </div>
-                  <div class="row mt-4 justify-content-between">
-                    <div class="col-lg-6 col-md-12">
-                      <p class="p2p__card-title mb-0">Данные отправителя</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 text-lg-right">
-                      <i class="main-blue-color">Заполнять латиницей</i>
-                    </div>
-                  </div>
-                  <div class="row col-pad8 mt-3">
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-name-sender" name="name"
-                          autocomplete="off"
-                          placeholder="Имя" aria-required="true">
-                        <label class="control-label form-label" for="form-name-sender">Имя</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-surname-sender" name="surname"
-                          autocomplete="off"
-                          placeholder="Фамилия" aria-required="true">
-                        <label class="control-label form-label" for="form-surname-sender">Фамилия</label>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-city-sender" name="city"
-                          autocomplete="off"
-                          placeholder="Город" aria-required="true">
-                        <label class="control-label form-label" for="form-city-sender">Город</label>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-index-sender" name="index"
-                          autocomplete="off"
-                          placeholder="Индекс" aria-required="true">
-                        <label class="control-label form-label" for="form-index-sender">Индекс</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-address-sender" name="address"
-                          autocomplete="off"
-                          placeholder="Адрес" aria-required="true">
-                        <label class="control-label form-label" for="form-address-sender">Адрес</label>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-address-sender" name="address"
+                            autocomplete="off"
+                            placeholder="Адрес" aria-required="true">
+                          <label class="control-label form-label" for="form-address-sender">Адрес</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg d-none d-lg-block">
-                  <!-- todo як тут краще центрувати стрілку? -->
                   <div class="text-center crossborder__arrow">
                     <img src="img/half-arrow-right.svg" alt="half-arrow-right">
                   </div>
                 </div>
                 <div class="col-lg-5">
-                  <p class="p2p__card-title">Отправить в</p>
-                  <div class="form-group select-input-wrapper" data-label="Украина">
-                    <select class="form-control form-input js-example-basic-single" name="select">
-                      <option value=""></option>
-                      <option value="1">Чехия</option>
-                      <option value="2">Франция</option>
-                      <option value="3"></option>
-                      <option value="4"></option>
-                      <option value="5"></option>
-                      <option value="6"></option>
-                      <option value="7"></option>
-                    </select>
-                  </div>
-                  <div class="bank-card">
-                    <!-- todo переробити на картку із mastercard -->
-                    <div class="bank-card__header">
-                      <div class="bank-card__bank"></div>
-                      <div class="bank-card__type">
-                        <img src="img/banks/mastercard.png" alt="mastercard">
+                  <div class="crossborder__card-wrapper">
+                    <h3 class="d-sm-none d-block mb-3">На карту</h3>
+                    <div class="d-none d-sm-block">
+                      <h4>Отправить в</h4>
+                      <div class="form-group select-input-wrapper" data-label="Украина">
+                        <select class="form-control form-input js-example-basic-single" name="select">
+                          <option value=""></option>
+                          <option value="1">Чехия</option>
+                          <option value="2">Франция</option>
+                        </select>
                       </div>
                     </div>
-                    <div class="bank-card__body">
-                      <div class="bank-card__number">
+                    <div class="bank-card">
+                      <div class="bank-card__header">
+                        <div class="bank-card__bank">
+                          <div class="d-sm-none d-block form-group select-input-wrapper" data-label="Украина">
+                            <select class="form-control form-input js-example-basic-single" name="select">
+                              <option value=""></option>
+                              <option value="1">Чехия</option>
+                              <option value="2">Франция</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="bank-card__type">
+                          <img src="img/banks/mastercard.png" alt="mastercard">
+                        </div>
+                      </div>
+                      <div class="bank-card__body">
+                        <div class="bank-card__number">
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="card-number5" name="name"
+                              autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                            <label class="control-label form-label" for="card-number5">Номер карты</label>
+                            <div class="help-block"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-lg-6 col-md-12">
+                        <h4 class="mb-0">Данные получателя</h4>
+                      </div>
+                      <div class="col-lg-6 col-md-12 text-lg-right">
+                        <i class="main-blue-color">Заполнять латиницей</i>
+                      </div>
+                    </div>
+                    <div class="row col-pad8 mt-3">
+                      <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                          <input type="tel" class="form-control form-input" id="card-number5" name="name"
-                            autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                          <label class="control-label form-label" for="card-number5">Номер карты</label>
-                          <div class="help-block"></div>
+                          <input type="text" class="form-control form-input" id="form-name-recipient" name="name"
+                            autocomplete="off"
+                            placeholder="Имя" aria-required="true">
+                          <label class="control-label form-label" for="form-name-recipient">Имя</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-surname-recipient" name="surname"
+                            autocomplete="off"
+                            placeholder="Фамилия" aria-required="true">
+                          <label class="control-label form-label" for="form-surname-recipient">Фамилия</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-city-recipient" name="city"
+                            autocomplete="off"
+                            placeholder="Город" aria-required="true">
+                          <label class="control-label form-label" for="form-city-recipient">Город</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="form-address-recipient" name="address"
+                            autocomplete="off"
+                            placeholder="Адрес" aria-required="true">
+                          <label class="control-label form-label" for="form-address-recipient">Адрес</label>
                         </div>
                       </div>
                     </div>
+                    <div class="checkbox-control mt-2">
+                      <input class="checkbox-input" type="checkbox" id="checkbox-agree">
+                      <label class="checkbox-label" for="checkbox-agree">Я согласен с условиями <a
+                        href="https://www.ipay.ua/media/files/public-offer.pdf" download>публичного договора</a> и
+                        <a href="https://www.ipay.ua/media/files/Privacy-policy.pdf" download>политикой
+                          конфиденциальности</a></label>
+                    </div>
+                    <div class="checkbox-control mt-4">
+                      <input class="checkbox-input" type="checkbox" id="checkbox-save">
+                      <label class="checkbox-label" for="checkbox-save">Сохранить личные данные отправителя для
+                        повторных переводов (требуется авторизация)</label>
+                    </div>
+                    <button class="btn btn-green w-100 mt-4">Перевести 106 EUR</button>
                   </div>
-                  <div class="row latin-data mt-4">
-                    <!-- todo чи треба обнуляти margin у p? -->
-                    <div class="col-lg-6 col-md-12">
-                      <p class="p2p__card-title mb-0">Данные получателя</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 text-lg-right">
-                      <i class="main-blue-color">Заполнять латиницей</i>
-                    </div>
-                  </div>
-                  <div class="row col-pad8 mt-3">
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-name-recipient" name="name"
-                          autocomplete="off"
-                          placeholder="Имя" aria-required="true">
-                        <label class="control-label form-label" for="form-name-recipient">Имя</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-surname-recipient" name="surname"
-                          autocomplete="off"
-                          placeholder="Фамилия" aria-required="true">
-                        <label class="control-label form-label" for="form-surname-recipient">Фамилия</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-city-recipient" name="city"
-                          autocomplete="off"
-                          placeholder="Город" aria-required="true">
-                        <label class="control-label form-label" for="form-city-recipient">Город</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control form-input" id="form-address-recipient" name="address"
-                          autocomplete="off"
-                          placeholder="Адрес" aria-required="true">
-                        <label class="control-label form-label" for="form-address-recipient">Адрес</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="checkbox-control mt-4">
-                    <input class="checkbox-input" type="checkbox" id="checkbox-agree">
-                    <label class="checkbox-label" for="checkbox-agree">Я согласен с условиями <a
-                      href="https://www.ipay.ua/media/files/public-offer.pdf" download>публичного договора</a> и
-                      <a href="https://www.ipay.ua/media/files/Privacy-policy.pdf" download>политикой
-                        конфиденциальности</a></label>
-                  </div>
-                  <div class="checkbox-control mt-4">
-                    <input class="checkbox-input" type="checkbox" id="checkbox-save">
-                    <label class="checkbox-label" for="checkbox-save">Сохранить личные данные отправителя для
-                      повторных переводов (требуется авторизация)</label>
-                  </div>
-                  <button class="btn btn-green w-100 mt-4">Перевести 106 EUR</button>
                 </div>
               </div>
             </form>
@@ -499,13 +514,11 @@
       </div>
       <div class="container mt-5 mb-4">
         <div class="crossborder__border">
-          <!-- todo як краще назвати клас для рамки? -->
           <h2 class="mb-3">Лимиты и ограничения</h2>
           <div class="row justify-content-center mt-4">
             <div class="col-lg-6 col-md-12 crossborder__left-limits">
               <img src="img/crossborder/from-Ukraine.svg" alt="from-Ukraine">
               <h5 class="my-4">Переводы с карты на карту из Украину за рубеж:</h5>
-              <!-- todo чи цю картку тут використовувати? -->
               <div class="crossborder__limits-card d-flex align-items-start">
                 <img src="img/crossborder/cards-icon.svg" alt="cards-icon">
                 <div>
