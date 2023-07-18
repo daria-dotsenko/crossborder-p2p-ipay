@@ -1,14 +1,19 @@
+.crossborder__main {
+  margin-bottom: 4rem;
+}
+
+.crossborder__limits, .crossborder__questions {
+  margin-bottom: 2.5rem;
+}
+
 .crossborder__arrow {
   margin-top: 2.5rem;
 }
 
-/*.form-input {*/
-/*  padding: 1.125rem 1rem;*/
-/*}*/
-
-.form-label {
+.p2p-crossborder .form-label {
   font-size: 1rem;
-  line-height: 1.125;
+  line-height: 1.25;
+  top: 1.25rem;
 }
 
 .bank-card__type img {
@@ -19,6 +24,7 @@
 
 .bank-card {
   padding: 1.5rem 2rem 2.875rem 2rem;
+  margin-top: 1.25rem;
   height: 17.25rem;
 }
 
@@ -77,7 +83,7 @@
   cursor: pointer;
 }
 
-.crossborder__border {
+.crossborder__limits-border {
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid #DEE7F3;
@@ -133,9 +139,9 @@
   position: absolute;
   content: "";
   width: 1.5rem;
-  height: 1.5rem;
+  height: 100%;
   right: 0;
-  top: 1.5rem;
+  top: 0;
   background: url("data:image/svg+xml,%3Csvg width= '25' height= '25' viewBox= '0 0 25 25' fill= 'none' xmlns= 'http://www.w3.org/2000/svg' %3E%3Cpath d= 'M6.6665 9.71704L12.5001 15.5507' stroke= '%23172A3A' stroke-width= '2' stroke-miterlimit= '10' stroke-linecap= 'round' stroke-linejoin= 'round' /%3E%3Cpath d= 'M12.5 15.5507L18.3336 9.71705' stroke= '%23172A3A' stroke-width= '2' stroke-miterlimit= '10' stroke-linecap= 'round' stroke-linejoin= 'round' /%3E%3C/svg%3E") center no-repeat;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
@@ -190,12 +196,25 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
+  .p2p-crossborder {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .crossborder__main {
+    margin-bottom: 2.5rem;
+  }
+
   .crossborder__card-wrapper {
     width: auto;
     max-width: 26.25rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .crossborder__questions {
+    margin-bottom: 0;
   }
 }
 
@@ -213,15 +232,15 @@
     text-align: center;
   }
 
-  .crossborder__left-limits {
+  .crossborder__limits-left {
     padding-right: 2.5rem;
   }
 
-  .crossborder__right-limits {
+  .crossborder__limits-right {
     padding-left: 2.5rem;
   }
 
-  .crossborder__right-limits::before {
+  .crossborder__limits-right::before {
     content: "";
     position: absolute;
     top: 0;
