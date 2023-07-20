@@ -357,54 +357,39 @@
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-lg-6 col-md-12">
+                        <div class="col-12">
                           <h4 class="mb-0">Данные отправителя</h4>
                         </div>
-                        <div class="col-lg-6 col-md-12 text-lg-right">
-                          <i class="main-blue-color">Заполнять латиницей</i>
-                        </div>
                       </div>
-                      <div class="row col-pad8 mt-3">
-                        <div class="col-md-6 col-sm-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="form-name-sender" name="name"
-                              autocomplete="off"
-                              placeholder="Имя" aria-required="true">
-                            <label class="control-label form-label" for="form-name-sender">Имя</label>
+                      <div class="crossborder__userdata">
+                        <!--                        todo як змінити колір стрілки? як вирівняти зображення по по топу? -->
+                        <div class="dropdown my-3">
+                          <div class="" id="dropdownCard" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="username-card username-card--active">
+                              <img class="username-card__img" src="img/crossborder/men.svg" alt="">
+                              <span class="username-card__body">
+                                <!-- todo чи треба тут цей id залишати? -->
+                                <span class="username-card__title mb-2"
+                                  id="sender-title-card-active">YAKOVENKO MUKOLA</span>
+                                <span class="username-card__country mb-2">POLAND</span>
+                                <span class="username-card__address">000000, Krakow, Welykoweska, 23</span>
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="form-surname-sender" name="surname"
-                              autocomplete="off"
-                              placeholder="Фамилия" aria-required="true">
-                            <label class="control-label form-label" for="form-surname-sender">Фамилия</label>
+                          <div class="dropdown-menu" aria-labelledby="dropdownCard">
+                            <div class="username-card">
+                              <img class="username-card__img" src="img/crossborder/men.svg" alt="">
+                              <span class="username-card__body">
+                                <span class="username-card__title mb-2">YAKOVENKO MUKOLA</span>
+                                <span class="username-card__country mb-2">CHECH REPUBLIK</span>
+                                <span class="username-card__address">000000, Brno, Welykoweska, 23</span>
+                              </span>
+                            </div>
                           </div>
+
                         </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="form-city-sender" name="city"
-                              autocomplete="off"
-                              placeholder="Город" aria-required="true">
-                            <label class="control-label form-label" for="form-city-sender">Город</label>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="form-index-sender" name="index"
-                              autocomplete="off"
-                              placeholder="Индекс" aria-required="true">
-                            <label class="control-label form-label" for="form-index-sender">Индекс</label>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="form-address-sender" name="address"
-                              autocomplete="off"
-                              placeholder="Адрес" aria-required="true">
-                            <label class="control-label form-label" for="form-address-sender">Адрес</label>
-                          </div>
-                        </div>
+                        <button type="button" class="btn btn-outline w-100">Другой отправитель</button>
                       </div>
                     </div>
                   </div>
@@ -630,7 +615,8 @@
                 <div class="crossborder__questions-card">
                   <div class="crossborder__questions-header" id="headingTwo">
                     <h4 class="mb-0">
-                      <button class="btn collapsed w-100" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                      <button class="btn collapsed w-100" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo"
                         aria-expanded="false" aria-controls="collapseTwo">
                         Как быстро деньги зачисляются на счет получателя?
                       </button>
@@ -647,7 +633,8 @@
                 <div class="crossborder__questions-card">
                   <div class="crossborder__questions-header" id="headingThree">
                     <h4 class="mb-0">
-                      <button class="btn collapsed w-100" type="button" data-toggle="collapse" data-target="#collapseThree"
+                      <button class="btn collapsed w-100" type="button" data-toggle="collapse"
+                        data-target="#collapseThree"
                         aria-expanded="false" aria-controls="collapseThree">
                         Какую валюту можно перевести?
                       </button>
@@ -665,7 +652,8 @@
                 <div class="crossborder__questions-card">
                   <div class="crossborder__questions-header" id="headingFour">
                     <h4 class="mb-0">
-                      <button class="btn collapsed w-100" type="button" data-toggle="collapse" data-target="#collapseFour"
+                      <button class="btn collapsed w-100" type="button" data-toggle="collapse"
+                        data-target="#collapseFour"
                         aria-expanded="false" aria-controls="collapseFour">
                         Какая комиссия за перевод?
                       </button>
@@ -684,7 +672,8 @@
                 <div class="crossborder__questions-card">
                   <div class="crossborder__questions-header" id="headingFive">
                     <h4 class="mb-0">
-                      <button class="btn collapsed w-100" type="button" data-toggle="collapse" data-target="#collapseFive"
+                      <button class="btn collapsed w-100" type="button" data-toggle="collapse"
+                        data-target="#collapseFive"
                         aria-expanded="false" aria-controls="collapseFive">
                         Нужно ли регистрироваться для отправки перевода?
                       </button>
@@ -840,5 +829,6 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script src="/js/custom.js"></script>
   <script src="/js/select2-style.js"></script>
+  <script src="/js/p2p-main-new.js"></script>
 </body>
 </html>
