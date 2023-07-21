@@ -356,46 +356,59 @@
                             data-placement="top" data-original-title="" title=""></a>
                         </div>
                       </div>
-                      <div class="row mt-4">
-                        <div class="col-12">
-                          <h4 class="mb-0">Данные отправителя</h4>
-                        </div>
-                      </div>
                       <div class="crossborder__userdata">
-                        <!--                        todo як змінити колір стрілки? як вирівняти зображення по по топу? -->
-                        <div class="dropdown mt-3">
-                          <div class="" id="dropdownCard" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="username-card username-card--active">
-                              <img class="username-card__img" src="img/crossborder/men.svg" alt="">
-                              <span class="username-card__body">
+                        <!-- todo як змінити колір стрілки? як вирівняти зображення по топу? -->
+                        <div class="collapse show" id="username-card">
+                          <div class="row mt-4">
+                            <div class="col-12">
+                              <h4 class="mb-0">Данные отправителя</h4>
+                            </div>
+                          </div>
+                          <div class="dropdown mt-3">
+                            <div id="dropdownCard" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                              <div class="username-card username-card--active">
+                                <img class="username-card__img" src="img/crossborder/men.svg" alt="">
+                                <span class="username-card__body">
                                 <!-- todo чи треба тут цей id залишати? -->
                                 <span class="username-card__title mb-2"
                                   id="sender-title-card-active">YAKOVENKO MUKOLA</span>
                                 <span class="username-card__country mb-2">POLAND</span>
                                 <span class="username-card__address">000000, Krakow, Welykoweska, 23</span>
                               </span>
+                              </div>
                             </div>
-                          </div>
-                          <div class="dropdown-menu" aria-labelledby="dropdownCard">
-                            <div class="username-card">
-                              <img class="username-card__img" src="img/crossborder/men.svg" alt="">
-                              <span class="username-card__body">
+                            <div class="dropdown-menu" aria-labelledby="dropdownCard">
+                              <div class="username-card">
+                                <img class="username-card__img" src="img/crossborder/men.svg" alt="">
+                                <span class="username-card__body">
                                 <span class="username-card__title mb-2">YAKOVENKO MUKOLA</span>
                                 <span class="username-card__country mb-2">CHECH REPUBLIK</span>
                                 <span class="username-card__address">000000, Brno, Welykoweska, 23</span>
                               </span>
+                              </div>
                             </div>
                           </div>
-
+                          <button class="btn btn-outline w-100 mt-3" type="button"
+                            data-toggle="collapse"
+                            data-target="#username-card, #username-input"
+                            aria-expanded="false"
+                            aria-controls="username-input">
+                            Другой
+                            отправитель
+                          </button>
                         </div>
-                        <button class="btn btn-outline w-100 mt-3" type="button"
-                          data-toggle="collapse"
-                          data-target="#username-collapse" aria-expanded="false" aria-controls="username-collapse">
-                          Другой
-                          отправитель
-                        </button>
-                        <div class="collapse" id="username-collapse">
+                        <div class="collapse" id="username-input">
+                          <div class="row mt-4">
+                            <div class="col-lg-6 col-md-12">
+                              <h4 class="mb-0">Данные отправителя</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-12 text-lg-right">
+                              <a id="open-saves" href="#username-card" data-toggle="collapse"
+                                data-target="#username-card, #username-input"
+                                aria-expanded="false" aria-controls="username-card, username-input">Мои сохранения</a>
+                            </div>
+                          </div>
                           <div class="row col-pad8 mt-3">
                             <div class="col-md-6 col-sm-12">
                               <div class="form-group">
