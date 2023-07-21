@@ -363,7 +363,7 @@
                       </div>
                       <div class="crossborder__userdata">
                         <!--                        todo як змінити колір стрілки? як вирівняти зображення по по топу? -->
-                        <div class="dropdown my-3">
+                        <div class="dropdown mt-3">
                           <div class="" id="dropdownCard" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="username-card username-card--active">
@@ -389,7 +389,58 @@
                           </div>
 
                         </div>
-                        <button type="button" class="btn btn-outline w-100">Другой отправитель</button>
+                        <button class="btn btn-outline w-100 mt-3" type="button"
+                          data-toggle="collapse"
+                          data-target="#username-collapse" aria-expanded="false" aria-controls="username-collapse">
+                          Другой
+                          отправитель
+                        </button>
+                        <div class="collapse" id="username-collapse">
+                          <div class="row col-pad8 mt-3">
+                            <div class="col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="form-name-sender" name="name"
+                                  autocomplete="off"
+                                  placeholder="Имя" aria-required="true">
+                                <label class="control-label form-label" for="form-name-sender">Имя</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="form-surname-sender"
+                                  name="surname"
+                                  autocomplete="off"
+                                  placeholder="Фамилия" aria-required="true">
+                                <label class="control-label form-label" for="form-surname-sender">Фамилия</label>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="form-city-sender" name="city"
+                                  autocomplete="off"
+                                  placeholder="Город" aria-required="true">
+                                <label class="control-label form-label" for="form-city-sender">Город</label>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="form-index-sender" name="index"
+                                  autocomplete="off"
+                                  placeholder="Индекс" aria-required="true">
+                                <label class="control-label form-label" for="form-index-sender">Индекс</label>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="form-address-sender"
+                                  name="address"
+                                  autocomplete="off"
+                                  placeholder="Адрес" aria-required="true">
+                                <label class="control-label form-label" for="form-address-sender">Адрес</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
