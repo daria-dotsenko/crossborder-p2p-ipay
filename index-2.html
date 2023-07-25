@@ -284,9 +284,7 @@
                       <div class="bank-card">
                         <div class="bank-card__header">
                           <div class="bank-card__bank">
-                            <!-- todo бачила на іншій сторінці, що для мобільної версії реалізовано модальне вікно із вибором, тут так само зробити? -->
-                            <!-- todo якщо ні, то як змінити ширину випадаючого списку? -->
-                            <div class="d-sm-none d-block form-group select-input-wrapper" data-label="Польша">
+                            <div class="form-group select-input-wrapper select-mobile d-sm-none d-block" data-label="Польша">
                               <select class="select-search form-control form-input js-example-basic-single"
                                 name="select">
                                 <option value=""></option>
@@ -329,16 +327,15 @@
                       </div>
                       <div class="crossborder__transfer-card mt-3">
                         <div class="row col-pad8">
-                          <div class="col-8">
+                          <div class="col-7 col-sm-8">
                             <div class="form-group has-success">
-                              <input type="tel" class="form-control form-input input-icon-right"
+                              <input type="tel" class="form-control form-input"
                                 id="form-icon-r-success"
                                 name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100">
                               <label class="control-label form-label" for="form-icon-r-success">Сумма перевода</label>
                             </div>
                           </div>
-                          <!-- todo як повертати значення яке було вказано у data-label? -->
-                          <div class="col-4">
+                          <div class="col-5 col-sm-4">
                             <div class="form-group select-input-wrapper" data-label="EUR">
                               <select class="form-control form-input js-example-basic-single" name="select">
                                 <option value=""></option>
@@ -346,15 +343,13 @@
                                 <option value="2">PLN</option>
                               </select>
                             </div>
-
                           </div>
-                          <!-- todo відносно чого позиціонувати знак питання? -->
-                          <p class="px-2">Будет списано: <span>106.00 EUR</span></p>
-                          <a role="button" tabindex="-1"
-                            class="transfer-card-button question-popover" data-toggle="popover"
-                            data-content="Комиссия за перевод составляет 1,5% + 40 грн (минимально - эквивалент 2 EUR) от суммы перевода."
-                            data-placement="top" data-original-title="" title=""></a>
                         </div>
+                        <p class="px-2">Будет списано: <span>106.00 EUR</span></p>
+                        <a role="button" tabindex="-1"
+                          class="transfer-card-button question-popover" data-toggle="popover"
+                          data-content="Комиссия за перевод составляет 1,5% + 40 грн (минимально - эквивалент 2 EUR) от суммы перевода."
+                          data-placement="top" data-original-title="" title=""></a>
                       </div>
                       <div class="crossborder__userdata">
                         <!-- todo як змінити колір стрілки? як вирівняти зображення по топу? -->
@@ -369,23 +364,21 @@
                               aria-expanded="false">
                               <div class="username-card username-card--active">
                                 <img class="username-card__img" src="img/crossborder/men.svg" alt="">
-                                <span class="username-card__body">
-                                <!-- todo чи треба тут цей id залишати? -->
-                                <span class="username-card__title mb-2"
-                                  id="sender-title-card-active">YAKOVENKO MUKOLA</span>
-                                <span class="username-card__country mb-2">POLAND</span>
-                                <span class="username-card__address">000000, Krakow, Welykoweska, 23</span>
-                              </span>
+                                <div class="px-3" id="sender-title-card-active">
+                                  <p class="username-card__title mb-2">YAKOVENKO MUKOLA</p>
+                                  <p class="username-card__country mb-2">POLAND</p>
+                                  <p class="username-card__address mb-0">000000, Krakow, Welykoweska, 23</p>
+                                </div>
                               </div>
                             </div>
                             <div class="dropdown-menu" aria-labelledby="dropdownCard">
                               <div class="username-card">
                                 <img class="username-card__img" src="img/crossborder/men.svg" alt="">
-                                <span class="username-card__body">
-                                <span class="username-card__title mb-2">YAKOVENKO MUKOLA</span>
-                                <span class="username-card__country mb-2">CHECH REPUBLIK</span>
-                                <span class="username-card__address">000000, Brno, Welykoweska, 23</span>
-                              </span>
+                                <div class="px-3">
+                                  <p class="username-card__title mb-2">YAKOVENKO MUKOLA</p>
+                                  <p class="username-card__country mb-2">CHECH REPUBLIK</p>
+                                  <p class="username-card__address mb-0">000000, Brno, Welykoweska, 23</p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -410,7 +403,7 @@
                             </div>
                           </div>
                           <div class="row col-pad8 mt-3">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-6">
                               <div class="form-group">
                                 <input type="text" class="form-control form-input" id="form-name-sender" name="name"
                                   autocomplete="off"
@@ -418,7 +411,7 @@
                                 <label class="control-label form-label" for="form-name-sender">Имя</label>
                               </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-6">
                               <div class="form-group">
                                 <input type="text" class="form-control form-input" id="form-surname-sender"
                                   name="surname"
@@ -512,7 +505,7 @@
                         </div>
                       </div>
                       <div class="row col-pad8 mt-3">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-6">
                           <div class="form-group">
                             <input type="text" class="form-control form-input" id="form-name-recipient" name="name"
                               autocomplete="off"
@@ -520,7 +513,7 @@
                             <label class="control-label form-label" for="form-name-recipient">Имя</label>
                           </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-6">
                           <div class="form-group">
                             <input type="text" class="form-control form-input" id="form-surname-recipient"
                               name="surname"
@@ -559,7 +552,7 @@
                         <label class="checkbox-label" for="checkbox-save">Сохранить личные данные отправителя для
                           повторных переводов (требуется авторизация)</label>
                       </div>
-                      <button class="btn btn-green w-100 mt-4">Перевести 106 EUR</button>
+                      <button class="btn btn-green w-100 mt-4" type="submit">Перевести 106 EUR</button>
                     </div>
                   </div>
                 </div>
@@ -893,6 +886,5 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script src="/js/custom.js"></script>
   <script src="/js/select2-style.js"></script>
-  <script src="/js/p2p-main-new.js"></script>
 </body>
 </html>

@@ -28,6 +28,14 @@
   height: 17.25rem;
 }
 
+.select-mobile .select2-container .select2-selection--single {
+  width: 180px;
+}
+
+.select-mobile .select2-container .select2-dropdown {
+  width: 180px;
+}
+
 .bank-card .select2-container--default .select2-selection--single {
   font-size: 1rem;
   border: none;
@@ -36,6 +44,10 @@
 
 .bank-card .select2-container.select2-container--default .select2-selection__arrow b {
   left: 36px;
+}
+
+.bank-card .select-mobile .select2-container.select2-container--default .select2-selection__arrow b {
+  left: -86px;
 }
 
 .bank-card .select2-container.select2-container--default.select2-container--open .select2-selection {
@@ -83,22 +95,22 @@
   cursor: pointer;
 }
 
-.dropdown [aria-expanded=true] .username-card--active::after {
+.crossborder__userdata .dropdown [aria-expanded=true] .username-card--active::after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.dropdown [aria-expanded=true] .username-card--active {
+.crossborder__userdata .dropdown [aria-expanded=true] .username-card--active {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.dropdown-menu.show {
+.crossborder__userdata .dropdown-menu.show {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.dropdown-menu {
+.crossborder__userdata .dropdown-menu {
   width: 100%;
   top: auto !important;
   -webkit-transform: none !important;
@@ -142,17 +154,6 @@
   /*background-position: center;*/
   background-repeat: no-repeat;
   background-size: contain;
-}
-.username-card__body {
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  width: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .username-card__body .username__title {
   white-space: nowrap;
@@ -289,9 +290,22 @@
   padding-left: 0.75rem;
 }
 
+@media screen and (max-width: 360px) {
+  .select-mobile .select2-container .select2-selection--single {
+    width: 130px;
+  }
+
+  .select-mobile .select2-container .select2-dropdown {
+    width: 130px;
+  }
+
+  .bank-card .select-mobile .select2-container.select2-container--default .select2-selection__arrow b {
+    left: -36px;
+  }
+}
 
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
   .bank-card__body {
     padding-top: 2rem;
   }
