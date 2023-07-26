@@ -67,7 +67,6 @@
 }
 
 .crossborder__transfer-card {
-  position: relative;
   padding: 1rem;
   border-radius: 0.5rem;
   background: #F0F5FA;
@@ -82,13 +81,11 @@
 }
 
 .transfer-card-button {
-  position: absolute;
-  left: 230px;
-  bottom: 19px;
+  display: inline-block;
   width: 16px;
   height: 16px;
   background-color: #F0F5FA;
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.69727 0.317383C6.21391 0.317383 4.76386 0.754216 3.53049 1.57264C2.29712 2.39107 1.33583 3.55433 0.768172 4.91532C0.200515 6.27631 0.0519903 7.77391 0.341379 9.21873C0.630769 10.6636 1.34507 11.9907 2.39397 13.0324C3.44286 14.074 4.77923 14.7834 6.23409 15.0708C7.68895 15.3582 9.19695 15.2107 10.5674 14.6469C11.9378 14.0832 13.1092 13.1285 13.9333 11.9037C14.7574 10.6788 15.1973 9.23877 15.1973 7.76565C15.1973 6.78753 15.0033 5.81898 14.6264 4.91532C14.2495 4.01165 13.697 3.19056 13.0006 2.49893C12.3041 1.80729 11.4773 1.25866 10.5674 0.884348C9.65745 0.510038 8.68218 0.317383 7.69727 0.317383ZM8.44727 12.9794H6.94727V11.4898H8.44727V12.9794ZM9.99977 7.20703L9.32477 7.89227C9.02269 8.15097 8.78593 8.47644 8.63353 8.84253C8.48113 9.20862 8.41733 9.6051 8.44727 10.0001H6.94727V9.62771C6.94869 8.83772 7.26404 8.08021 7.82477 7.51985L8.75477 6.58137C8.89577 6.44481 9.00762 6.28143 9.08365 6.10099C9.15967 5.92056 9.19832 5.72676 9.19727 5.53117C9.19727 5.13609 9.03923 4.75719 8.75793 4.47782C8.47662 4.19846 8.09509 4.04151 7.69727 4.04151C7.29944 4.04151 6.91791 4.19846 6.63661 4.47782C6.3553 4.75719 6.19727 5.13609 6.19727 5.53117H4.69727C4.69727 4.74101 5.01334 3.98321 5.57595 3.42448C6.13856 2.86575 6.90162 2.55186 7.69727 2.55186C8.49292 2.55186 9.25598 2.86575 9.81859 3.42448C10.3812 3.98321 10.6973 4.74101 10.6973 5.53117C10.6977 6.15952 10.4468 6.76232 9.99977 7.20703Z' fill='%234F6E7A'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.830566' width='16' height='16' rx='8' fill='%237FA1C2'/%3E%3Cpath d='M5.65687 6.31885C5.1987 6.31885 4.82945 5.9217 4.95726 5.48172C5.14063 4.85049 5.46998 4.32485 5.94531 3.90479C6.6224 3.30583 7.47917 3.00635 8.51562 3.00635C9.61458 3.00635 10.5026 3.30062 11.1797 3.88916C11.8568 4.47249 12.1953 5.21729 12.1953 6.12354C12.1953 6.63395 12.0781 7.10791 11.8438 7.54541C11.6146 7.98291 11.1797 8.46729 10.5391 8.99854C9.89844 9.52979 9.50521 9.95426 9.35938 10.272C9.26403 10.4763 9.19985 10.7708 9.16684 11.1554C9.13438 11.5338 8.83282 11.8423 8.45312 11.8423C8.07343 11.8423 7.76152 11.534 7.78725 11.1552C7.82966 10.5308 7.93443 10.0516 8.10156 9.71729C8.32552 9.26416 8.73698 8.78239 9.33594 8.27197C9.9401 7.76156 10.3151 7.37093 10.4609 7.1001C10.6068 6.82406 10.6797 6.53239 10.6797 6.2251C10.6797 5.62614 10.4818 5.13395 10.0859 4.74854C9.6901 4.35791 9.17188 4.1626 8.53125 4.1626C7.4878 4.1626 6.80365 4.66344 6.4788 5.66513C6.35971 6.03233 6.0429 6.31885 5.65687 6.31885ZM9.30469 13.854C9.30469 14.2963 8.94617 14.6548 8.50391 14.6548C8.06165 14.6548 7.70312 14.2963 7.70312 13.854C7.70312 13.4117 8.06165 13.0532 8.50391 13.0532C8.94617 13.0532 9.30469 13.4117 9.30469 13.854Z' fill='white'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
@@ -141,7 +138,7 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
@@ -151,9 +148,6 @@
   -ms-flex: 0 0 1.5rem;
   flex: 0 0 1.5rem;
   max-width: 1.5rem;
-  /*background-position: center;*/
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .username-card__body .username__title {
   white-space: nowrap;
@@ -171,7 +165,7 @@
   height: 100%;
   top: 0;
   right: 0.75rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.1665 9.6286L12.0001 15.4622' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4623L17.8336 9.62867' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M6.16638 10.1287L12 15.9623' stroke='%233B566E' stroke-width='1.07292' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.9622L17.8336 10.1285' stroke='%233B566E' stroke-width='1.07292' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
@@ -193,7 +187,13 @@
   border: 1px solid #DEE7F3;
 }
 
+.crossborder__limits-border h4 {
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
 .crossborder__limits-card {
+  color: #3B566E;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 10px 0 rgba(23, 42, 58, 0.10);
@@ -206,6 +206,11 @@
 
 .crossborder__limits-card img {
   margin-right: 0.5rem;
+}
+
+.crossborder__limits-card h5 {
+  font-size: 1.125rem;
+
 }
 
 .crossborder__cards {
@@ -226,6 +231,10 @@
   background-position: -122px -49px;
 }
 
+.crossborder__questions h2 {
+  margin-bottom: 2.25rem;
+}
+
 .crossborder__questions-card {
   border-bottom: 2px solid #DEE7F3;
 }
@@ -236,6 +245,7 @@
 }
 
 .crossborder__questions-header button {
+  font-family: Montserrat;
   text-align: left;
 }
 
@@ -337,7 +347,7 @@
     margin-right: auto;
   }
 
-  .crossborder__questions {
+  .crossborder__questions, .crossborder__questions h2 {
     margin-bottom: 0;
   }
 }
