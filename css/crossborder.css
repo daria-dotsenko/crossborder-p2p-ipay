@@ -23,7 +23,7 @@
 }
 
 .bank-card {
-  padding: 1.5rem 2rem 2.875rem 2rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
   margin-top: 1.25rem;
   height: 17.25rem;
 }
@@ -55,7 +55,7 @@
 }
 
 .bank-card .select2-container.select2-container--default.select2-container--open .select2-dropdown--below {
-   border-top: none;
+  border-top: none;
 }
 
 .bank-card__bank {
@@ -84,12 +84,15 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-color: #F0F5FA;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.830566' width='16' height='16' rx='8' fill='%237FA1C2'/%3E%3Cpath d='M5.65687 6.31885C5.1987 6.31885 4.82945 5.9217 4.95726 5.48172C5.14063 4.85049 5.46998 4.32485 5.94531 3.90479C6.6224 3.30583 7.47917 3.00635 8.51562 3.00635C9.61458 3.00635 10.5026 3.30062 11.1797 3.88916C11.8568 4.47249 12.1953 5.21729 12.1953 6.12354C12.1953 6.63395 12.0781 7.10791 11.8438 7.54541C11.6146 7.98291 11.1797 8.46729 10.5391 8.99854C9.89844 9.52979 9.50521 9.95426 9.35938 10.272C9.26403 10.4763 9.19985 10.7708 9.16684 11.1554C9.13438 11.5338 8.83282 11.8423 8.45312 11.8423C8.07343 11.8423 7.76152 11.534 7.78725 11.1552C7.82966 10.5308 7.93443 10.0516 8.10156 9.71729C8.32552 9.26416 8.73698 8.78239 9.33594 8.27197C9.9401 7.76156 10.3151 7.37093 10.4609 7.1001C10.6068 6.82406 10.6797 6.53239 10.6797 6.2251C10.6797 5.62614 10.4818 5.13395 10.0859 4.74854C9.6901 4.35791 9.17188 4.1626 8.53125 4.1626C7.4878 4.1626 6.80365 4.66344 6.4788 5.66513C6.35971 6.03233 6.0429 6.31885 5.65687 6.31885ZM9.30469 13.854C9.30469 14.2963 8.94617 14.6548 8.50391 14.6548C8.06165 14.6548 7.70312 14.2963 7.70312 13.854C7.70312 13.4117 8.06165 13.0532 8.50391 13.0532C8.94617 13.0532 9.30469 13.4117 9.30469 13.854Z' fill='white'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
   cursor: pointer;
+}
+
+.crossborder__userdata {
+  margin-bottom: 2.5rem;
 }
 
 .crossborder__userdata .dropdown [aria-expanded=true] .username-card--active::after {
@@ -134,29 +137,19 @@
 
 .username-card {
   font-size: 1.125rem;
+  line-height: 1;
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
+  flex-direction: column;
+  -ms-flex-align: start;
   align-items: flex-start;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
   cursor: pointer;
 }
-.username-card__img {
-  -ms-flex: 0 0 1.5rem;
-  flex: 0 0 1.5rem;
-  max-width: 1.5rem;
-}
-.username-card__body .username__title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.username-card__body .username-card__country, .username-card__body .username-card__country, .username-card__body .username-card__address span {
-  line-height: 1;
-}
+
 .username-card--active::after {
   position: absolute;
   display: block;
@@ -172,12 +165,24 @@
   z-index: 10;
 }
 
+.username-card::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  left: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='men' clip-path='url(%23clip0_387_1588)'%3E%3Cg id='profile user male man 2'%3E%3Cpath id='Vector' d='M2.5 21.5V21.13C2.5 19.53 3.45 18.09 4.92 17.46L9.5 15.5V14.5L8.88 13.88C8 13 7.5 11.8 7.5 10.54V5.97997C7.5 4.91997 8.06 3.92997 8.98 3.39997C9.78 2.92997 11 3.49997 10.5 2.49997C9.98 1.45997 14.22 2.92997 15.02 3.39997C15.94 3.93997 16.5 4.91997 16.5 5.97997V10.55C16.5 11.8 16 13 15.12 13.89L14.5 14.5V15.5L19.08 17.46C20.55 18.09 21.5 19.53 21.5 21.13V21.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_387_1588'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
 .crossborder__userdata button {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
   padding: 0.75rem 0.5rem;
-  margin-bottom: 40px;
   border: 3px solid #F0F5FA;
 }
 
@@ -273,7 +278,7 @@
 }
 
 .lorem-text p {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 .lorem-text ul {
@@ -300,7 +305,7 @@
   padding-left: 0.75rem;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
   .select-mobile .select2-container .select2-selection--single {
     width: 130px;
   }
@@ -313,24 +318,19 @@
     left: -36px;
   }
 
-  .bank-card .form-label {
-    top: 1.1rem;
-    left: 0.75rem;
-  }
-}
-
-
-@media screen and (max-width: 576px) {
-  .bank-card__body {
-    padding-top: 2rem;
-  }
-
   .bank-card {
     padding: 1rem 1.5rem 2.875rem 1.5rem;
   }
 }
 
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 575px) {
+  .bank-card__body {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .p2p-crossborder {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -350,9 +350,22 @@
   .crossborder__questions, .crossborder__questions h2 {
     margin-bottom: 0;
   }
+
+  .bank-card .form-label {
+    top: 1.1rem;
+    left: 1rem;
+  }
+
+  .bank-card input:focus {
+    padding-left: 0.825rem;
+  }
+
+  .bank-card .form-input {
+    padding-left: 0.825rem;
+  }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
   .p2p-crossborder {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
