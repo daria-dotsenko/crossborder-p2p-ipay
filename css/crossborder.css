@@ -178,6 +178,10 @@
   z-index: 10;
 }
 
+#open-saves {
+  text-decoration: underline;
+}
+
 .crossborder__userdata button {
   font-size: 16px;
   font-weight: 400;
@@ -198,6 +202,7 @@
 }
 
 .crossborder__limits-card {
+  position: relative;
   color: #3B566E;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -213,27 +218,60 @@
   margin-right: 0.5rem;
 }
 
-.crossborder__limits-card h5 {
+.crossborder__limits-card .font-weight-bold {
   font-size: 1.125rem;
-
+  line-height: 1.2;
 }
 
-.crossborder__cards {
-  position: relative;
-  padding-left: 2.5rem;
+.cards-icon {
+  padding-left: 2rem;
 }
 
-.crossborder__cards::before {
+.cards-icon::before {
   position: absolute;
+  display: block;
   content: "";
-  transform: rotate(90deg);
+  width: 1.5rem;
+  height: 100%;
+  left: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6741 17.7865L4.74206 19.2805C3.64406 19.3765 2.67206 18.5665 2.57606 17.4625L1.78406 8.49853C1.68806 7.40053 2.49806 6.42853 3.60206 6.33253L20.5341 4.83853C21.6381 4.74253 22.6041 5.55253 22.7001 6.65653L23.4921 15.6205C23.5881 16.7185 22.7781 17.6905 21.6741 17.7865Z' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22.9701 17.2885L22.6641 20.4805C22.5621 21.5785 21.5841 22.3885 20.4861 22.2805L3.56006 20.6665C2.46206 20.5645 1.65206 19.5865 1.76006 18.4885L2.25807 13.2925' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.21001 13.2146L7.34601 13.0286' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.48194 12.8366L11.6119 12.6506' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.7481 12.4646L15.8841 12.2726' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.0201 12.0866L20.1501 11.9006' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.426 15.1527L20.414 14.8887' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.47407 16.2027L6.47006 16.1187' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.63388 8.82849L5.49788 9.02049' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: top;
   background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  left: 0.25rem;
-  background-image: url("../img/menu-catalogue.png");
-  background-size: 169px;
-  background-position: -122px -49px;
+  z-index: 10;
+}
+
+.calendar-icon {
+  padding-left: 2rem;
+}
+
+.calendar-icon::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  left: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4_7586)'%3E%3Cpath d='M6.36356 2.25439L6.36356 6.18623' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.6363 2.25439L18.6363 6.18614' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.1 21.3306H4.9C3.85 21.3306 3 20.4806 3 19.4306V6.23057C3 5.18057 3.85 4.33057 4.9 4.33057H20.1C21.15 4.33057 22 5.18057 22 6.23057V19.4306C22 20.4806 21.15 21.3306 20.1 21.3306Z' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.5 14.3306C6.77614 14.3306 7 14.1067 7 13.8306C7 13.5544 6.77614 13.3306 6.5 13.3306C6.22386 13.3306 6 13.5544 6 13.8306C6 14.1067 6.22386 14.3306 6.5 14.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 14.3306C10.7761 14.3306 11 14.1067 11 13.8306C11 13.5544 10.7761 13.3306 10.5 13.3306C10.2239 13.3306 10 13.5544 10 13.8306C10 14.1067 10.2239 14.3306 10.5 14.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5 14.3306C14.7761 14.3306 15 14.1067 15 13.8306C15 13.5544 14.7761 13.3306 14.5 13.3306C14.2239 13.3306 14 13.5544 14 13.8306C14 14.1067 14.2239 14.3306 14.5 14.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.5 14.3306C18.7761 14.3306 19 14.1067 19 13.8306C19 13.5544 18.7761 13.3306 18.5 13.3306C18.2239 13.3306 18 13.5544 18 13.8306C18 14.1067 18.2239 14.3306 18.5 14.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.5 10.3306C6.77614 10.3306 7 10.1067 7 9.83057C7 9.55442 6.77614 9.33057 6.5 9.33057C6.22386 9.33057 6 9.55442 6 9.83057C6 10.1067 6.22386 10.3306 6.5 10.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 10.3306C10.7761 10.3306 11 10.1067 11 9.83057C11 9.55442 10.7761 9.33057 10.5 9.33057C10.2239 9.33057 10 9.55442 10 9.83057C10 10.1067 10.2239 10.3306 10.5 10.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5 10.3306C14.7761 10.3306 15 10.1067 15 9.83057C15 9.55442 14.7761 9.33057 14.5 9.33057C14.2239 9.33057 14 9.55442 14 9.83057C14 10.1067 14.2239 10.3306 14.5 10.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.5 10.3306C18.7761 10.3306 19 10.1067 19 9.83057C19 9.55442 18.7761 9.33057 18.5 9.33057C18.2239 9.33057 18 9.55442 18 9.83057C18 10.1067 18.2239 10.3306 18.5 10.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.5 18.3306C6.77614 18.3306 7 18.1067 7 17.8306C7 17.5544 6.77614 17.3306 6.5 17.3306C6.22386 17.3306 6 17.5544 6 17.8306C6 18.1067 6.22386 18.3306 6.5 18.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 18.3306C10.7761 18.3306 11 18.1067 11 17.8306C11 17.5544 10.7761 17.3306 10.5 17.3306C10.2239 17.3306 10 17.5544 10 17.8306C10 18.1067 10.2239 18.3306 10.5 18.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5 18.3306C14.7761 18.3306 15 18.1067 15 17.8306C15 17.5544 14.7761 17.3306 14.5 17.3306C14.2239 17.3306 14 17.5544 14 17.8306C14 18.1067 14.2239 18.3306 14.5 18.3306Z' fill='%233B566E' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4_7586'%3E%3Crect width='24' height='24' fill='white' transform='translate(0.5 0.830566)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.mastercard-icon {
+  padding-left: 2rem;
+}
+
+.mastercard-icon::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  left: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.108 18.5946L4.11034 18.5223C3.00817 18.5167 2.11493 17.6206 2.12105 16.5125L2.15826 7.51364C2.16383 6.41147 3.05994 5.51823 4.16808 5.52435L21.1657 5.59664C22.2739 5.60276 23.1611 6.49831 23.155 7.60646L23.1178 16.6053C23.1122 17.7075 22.2161 18.6007 21.108 18.5946Z' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='10' cy='12.1653' r='3.75' stroke='%233B566E'/%3E%3Ccircle cx='15.5' cy='12.1653' r='3.75' stroke='%233B566E'/%3E%3C/svg%3E%0A");
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .crossborder__questions h2 {
@@ -328,6 +366,10 @@
   .bank-card__body {
     padding-top: 2rem;
   }
+
+  .crossborder__limits-border {
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -379,13 +421,13 @@
     text-align: center;
   }
 
-  .crossborder__limits-left {
-    padding-right: 2.5rem;
-  }
+  /*.crossborder__limits-left {*/
+  /*  padding-right: 2.5rem;*/
+  /*}*/
 
-  .crossborder__limits-right {
-    padding-left: 2.5rem;
-  }
+  /*.crossborder__limits-right {*/
+  /*  padding-left: 2.5rem;*/
+  /*}*/
 
   .crossborder__limits-right::before {
     content: "";

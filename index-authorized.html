@@ -360,22 +360,30 @@
                             </div>
                           </div>
                           <div class="dropdown mt-3">
-                            <div id="dropdownCard" data-toggle="dropdown" aria-haspopup="true"
-                              aria-expanded="false">
+                            <input type="hidden" id="user_name" name="user-name" value="YAKOVENKO MUKOLA">
+                            <input type="hidden" id="user_country" name="user-country" value="POLAND">
+                            <input type="hidden" id="user_address" name="user-address" value="000000, Krakow, Welykoweska, 23">
+                            <div id="dropdownCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <div class="username-card username-card--active" id="sender-title-card-active">
-                                <p class="username-card__title mb-2">YAKOVENKO MUKOLA</p>
-                                <p class="username-card__country mb-2">POLAND</p>
-                                <p class="username-card__address mb-0">000000, Krakow, Welykoweska, 23</p>
+                                <p class="username-card__title mb-2" data-user-name>YAKOVENKO MUKOLA</p>
+                                <p class="username-card__country mb-2" data-user-country>POLAND</p>
+                                <p class="username-card__address mb-0" data-user-address>000000, Krakow, Welykoweska, 23</p>
                               </div>
                             </div>
                             <div class="dropdown-menu" aria-labelledby="dropdownCard">
                               <div class="username-card">
-                                <p class="username-card__title mb-2">YAKOVENKO MUKOLA</p>
-                                <p class="username-card__country mb-2">CHECH REPUBLIK</p>
-                                <p class="username-card__address mb-0">000000, Brno, Welykoweska, 23</p>
+                                <p class="username-card__title mb-2" data-user-name>YAKOVENKO IVAN</p>
+                                <p class="username-card__country mb-2" data-user-country>CHECH REPUBLIK</p>
+                                <p class="username-card__address mb-0" data-user-address>000000, Brno, Welykoweska, 23</p>
+                              </div>
+                              <div class="username-card">
+                                <p class="username-card__title mb-2" data-user-name>YAKOVENKO OLEG</p>
+                                <p class="username-card__country mb-2" data-user-country>FRANCE</p>
+                                <p class="username-card__address mb-0" data-user-address>000000, Paris, Welykoweska, 23</p>
                               </div>
                             </div>
                           </div>
+
                           <button class="btn btn-outline btn-block mt-3" type="button"
                             data-toggle="collapse"
                             data-target="#username-card, #username-input"
@@ -556,27 +564,24 @@
             <h2 class="mb-3">Лимиты и ограничения</h2>
             <div class="row mt-4">
               <div class="col-lg-6">
-                <div class="crossborder__limits-left">
+                <div class="crossborder__limits-left pr-lg-3 pr-xl-4 mb-4 mb-xl-0">
                   <img src="img/crossborder/from-Ukraine.svg" alt="from-Ukraine">
                   <h4 class="my-4">Переводы с карты на карту из Украину за рубеж:</h4>
                   <div class="crossborder__limits-card d-flex align-items-start">
-                    <img src="img/crossborder/cards-icon.svg" alt="cards-icon">
-                    <div>
-                      <h5>29 999 UAH</h5>
+                    <div class="cards-icon">
+                      <p class="mb-2 font-weight-bold">29 999 UAH</p>
                       <p>Максимальная сумма перевода одной транзакцией</p>
                     </div>
                   </div>
                   <div class="crossborder__limits-card d-flex align-items-start mt-3">
-                    <img src="img/crossborder/calendar.svg" alt="calendar">
-                    <div>
-                      <h5>360 000 UAH</h5>
+                    <div class="calendar-icon">
+                      <p class="mb-2 font-weight-bold">360 000 UAH</p>
                       <p>Максимальная сумма переводов в месяц</p>
                     </div>
                   </div>
                   <div class="crossborder__limits-card d-flex align-items-start my-3">
-                    <img src="img/crossborder/mastercard-icon.svg" alt="astercard-icon">
-                    <div>
-                      <h5>Mastercard</h5>
+                    <div class="mastercard-icon">
+                      <p class="mb-2 font-weight-bold">Mastercard</p>
                       <p>Перевод возможен только с валютных карт Mastercard </p>
                     </div>
                   </div>
@@ -600,27 +605,24 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="crossborder__limits-right">
+                <div class="crossborder__limits-right pl-lg-3 pl-xl-4">
                   <img src="img/crossborder/in-Ukraine.svg" alt="in-Ukraine">
                   <h4 class="my-4">Переводы с карты на карту в Украину из-за рубежа:</h4>
-                  <div class="crossborder__limits-card d-flex align-items-start">
-                    <img src="img/crossborder/cards-icon.svg" alt="cards-icon">
-                    <div>
-                      <h5>29 999 UAH</h5>
+                  <div class="crossborder__limits-card">
+                    <div class="cards-icon">
+                      <p class="mb-2 font-weight-bold">29 999 UAH</p>
                       <p>Максимальная сумма перевода одной транзакцией</p>
                     </div>
                   </div>
                   <div class="crossborder__limits-card d-flex align-items-start mt-3">
-                    <img src="img/crossborder/calendar.svg" alt="calendar">
-                    <div>
-                      <h5>360 000 UAH</h5>
+                    <div class="calendar-icon">
+                      <p class="mb-2 font-weight-bold">360 000 UAH</p>
                       <p>Максимальная сумма переводов в месяц</p>
                     </div>
                   </div>
                   <div class="crossborder__limits-card d-flex align-items-start my-3">
-                    <img src="img/crossborder/mastercard-icon.svg" alt="mastercard-icon">
-                    <div>
-                      <h5>Mastercard</h5>
+                    <div class="mastercard-icon">
+                      <p class="mb-2 font-weight-bold">Mastercard</p>
                       <p>Перевод возможен только с карт Mastercard</p>
                     </div>
                   </div>
@@ -881,5 +883,6 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script src="/js/custom.js"></script>
   <script src="/js/select2-style.js"></script>
+  <script src="/js/crossborder.js"></script>
 </body>
 </html>
