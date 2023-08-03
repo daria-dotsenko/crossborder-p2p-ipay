@@ -32,6 +32,8 @@
   width: 180px;
 }
 
+
+
 .select-mobile .select2-container .select2-dropdown {
   width: 180px;
 }
@@ -81,6 +83,9 @@
 }
 
 .transfer-card-button {
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -40%);
   display: inline-block;
   width: 16px;
   height: 16px;

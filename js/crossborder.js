@@ -10,31 +10,31 @@ usernameCards.forEach(card => {
 });
 
 function updateCard() {
-    // get the data of the card clicked on
-    const cardName = this.querySelector('.username-card__title').textContent;
+    // get data from the selected card
+    const name = this.querySelector('.username-card__title').textContent;
     const country = this.querySelector('.username-card__country').textContent;
     const address = this.querySelector('.username-card__address').textContent;
 
-    // get the data of the active (selected) card
+    // get data from the active card
     const activeUsernameCard = document.querySelector('.username-card--active');
     if (activeUsernameCard) {
         const activeCardName = activeUsernameCard.querySelector('.username-card__title').textContent;
         const activeCountry = activeUsernameCard.querySelector('.username-card__country').textContent;
         const activeAddress = activeUsernameCard.querySelector('.username-card__address').textContent;
 
-        // replace data on the clicked card with data from the active card
+        // replace data on the selected card with data from the active card
         this.querySelector('.username-card__title').textContent = activeCardName;
         this.querySelector('.username-card__country').textContent = activeCountry;
         this.querySelector('.username-card__address').textContent = activeAddress;
 
         // replace data on the active card with data from the selected card
-        activeUsernameCard.querySelector('.username-card__title').textContent = cardName;
+        activeUsernameCard.querySelector('.username-card__title').textContent = name;
         activeUsernameCard.querySelector('.username-card__country').textContent = country;
         activeUsernameCard.querySelector('.username-card__address').textContent = address;
     }
 
     // update the inputs
-    userNameInput.value = cardName;
+    userNameInput.value = name;
     userCountryInput.value = country;
     userAddressInput.value = address;
 }
@@ -42,22 +42,36 @@ function updateCard() {
 // jQuery
 
 // $(document).ready(function() {
-//     $('.username-card').on('click', function() {
+//     $('.username-card:not(.username-card--active)').on('click', function() {
 //         updateCard($(this));
 //     });
 //
-//     function updateCard(card) {
-//         const cardName = card.find('.username-card__title').text();
-//         const country = card.find('.username-card__country').text();
-//         const address = card.find('.username-card__address').text();
+//     function updateCard(selectedCard) {
+//         const activeCard = $('.username-card--active');
 //
-//         $('#user_name').val(cardName);
-//         $('#user_country').val(country);
-//         $('#user_address').val(address);
+//         // get data from the selected card
+//         const selectedName = selectedCard.find('.username-card__title').text();
+//         const selectedCountry = selectedCard.find('.username-card__country').text();
+//         const selectedAddress = selectedCard.find('.username-card__address').text();
 //
-//         const usernameCard = $('#sender-title-card-active');
-//         usernameCard.find('[data-user-name]').text(cardName);
-//         usernameCard.find('[data-user-country]').text(country);
-//         usernameCard.find('[data-user-address]').text(address);
+//         // get data from the active card
+//         const activeName = activeCard.find('.username-card__title').text();
+//         const activeCountry = activeCard.find('.username-card__country').text();
+//         const activeAddress = activeCard.find('.username-card__address').text();
+//
+//         // replace data on the selected card with data from the active card
+//         selectedCard.find('.username-card__title').text(activeName);
+//         selectedCard.find('.username-card__country').text(activeCountry);
+//         selectedCard.find('.username-card__address').text(activeAddress);
+//
+//         // replace data on the active card with data from the selected card
+//         activeCard.find('.username-card__title').text(selectedName);
+//         activeCard.find('.username-card__country').text(selectedCountry);
+//         activeCard.find('.username-card__address').text(selectedAddress);
+//
+//         // update the inputs
+//         $('#user_name').val(selectedName);
+//         $('#user_country').val(selectedCountry);
+//         $('#user_address').val(selectedAddress);
 //     }
 // });
