@@ -82,6 +82,10 @@
   font-weight: bold;
 }
 
+.crossborder__transfer-card .form-group {
+  margin-bottom: 0.5rem;
+}
+
 .transfer-card-button {
   position: absolute;
   top: 40%;
