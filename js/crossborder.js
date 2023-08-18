@@ -1,5 +1,7 @@
 // JavaScript
 
+// Changing the sender data in the user card
+
 const userNameInput = document.getElementById('user_name');
 const userCountryInput = document.getElementById('user_country');
 const userAddressInput = document.getElementById('user_address');
@@ -38,6 +40,55 @@ function updateCard() {
     userCountryInput.value = country;
     userAddressInput.value = address;
 }
+
+//
+
+// Changing the country in dropdown
+
+const senderInput = document.getElementById('sender_country');
+const senderInputMobile = document.getElementById('sender_country_mobile');
+const countries = document.querySelectorAll('.crossborder__dropdown-item');
+const currentCountry = document.getElementById('dropdownCountryButton');
+const currentCountryMobile = document.getElementById('dropdownCountryButtonMobile');
+
+countries.forEach(country => {
+    country.addEventListener('click', updateCountry);
+});
+
+function updateCountry() {
+    // const selectedCountryId = this.id.toLocaleLowerCase();
+    const selectedCountry = this.getAttribute('aria-country').toLocaleLowerCase();
+    console.log(selectedCountry);
+
+    // console.log(this.getAttribute('aria-country').toLocaleLowerCase())
+
+    currentCountry.classList.remove(`crossborder__dropdown-${senderInput.value.toLocaleLowerCase()}`);
+    currentCountryMobile.classList.remove(`crossborder__dropdown-${senderInput.value.toLocaleLowerCase()}`);
+
+    senderInput.value = selectedCountry;
+    senderInputMobile.value = selectedCountry;
+    currentCountry.innerHTML = this.textContent;
+    currentCountryMobile.innerHTML = this.textContent;
+    currentCountry.classList.add(`crossborder__dropdown-${selectedCountry}`);
+    currentCountryMobile.classList.add(`crossborder__dropdown-${selectedCountry}`);
+}
+
+// Sorting dropdown with countries
+
+const countriesDropdownMenu = document.querySelector('.crossborder__dropdown-menu');
+const countriesList = Array.from(countriesDropdownMenu.querySelectorAll('.crossborder__dropdown-item'));
+
+countriesList.sort((a, b) => {
+    const textA = a.textContent.trim().toUpperCase();
+    const textB = b.textContent.trim().toUpperCase();
+    return textA.localeCompare(textB);
+});
+
+countriesDropdownMenu.innerHTML = '';
+countriesList.forEach(item => {
+    countriesDropdownMenu.appendChild(item);
+});
+
 
 // jQuery
 

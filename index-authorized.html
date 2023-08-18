@@ -273,35 +273,94 @@
                       <h3 class="d-lg-none mb-3">С карты</h3>
                       <div class="d-none d-lg-block">
                         <h4>Отправить из</h4>
-                        <div class="form-group select-input-wrapper" data-label="Польша">
-                          <select class="select-search form-control form-input js-example-basic-single" name="select">
-                            <option value=""></option>
-                            <option value="1">Чешская Республика</option>
-                            <option value="2">Франция</option>
-                            <option value="3">Германия</option>
-                            <option value="4">Австрия</option>
-                            <option value="5">Литва</option>
-                            <option value="6">Латвия</option>
-                            <option value="7">Эстония</option>
-                          </select>
+
+                        <div class="crossborder__dropdown dropdown">
+                          <input type="hidden" id="sender_country" name="sender-country" value="Poland">
+                          <button
+                            class="heading-color crossborder__dropdown-btn crossborder__dropdown-poland dropdown-toggle text-left"
+                            type="button" id="dropdownCountryButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Польша
+                          </button>
+                          <div class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                            aria-labelledby="dropdownCountryButton">
+                            <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item">Чешская
+                              Республика</a>
+                            <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                            <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item">Германия</a>
+                            <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                            <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                            <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                            <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                            <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                            <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                            <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                            <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item">Ирландия</a>
+                            <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                          </div>
                         </div>
+
+                        <!--                        <div class="form-group select-input-wrapper" data-label="Польша">-->
+                        <!--                          <select class="select-search form-control form-input js-example-basic-single" name="select">-->
+                        <!--                            <option value=""></option>-->
+                        <!--                            <option value="1">Чешская Республика</option>-->
+                        <!--                            <option value="2">Франция</option>-->
+                        <!--                            <option value="3">Германия</option>-->
+                        <!--                            <option value="4">Австрия</option>-->
+                        <!--                            <option value="5">Литва</option>-->
+                        <!--                            <option value="6">Латвия</option>-->
+                        <!--                            <option value="7">Эстония</option>-->
+                        <!--                          </select>-->
+                        <!--                        </div>-->
+
                       </div>
                       <div class="bank-card">
                         <div class="bank-card__top">
-                            <div class="form-group select-input-wrapper select-mobile d-lg-none" data-label="Польша">
-                              <select class="select-search form-control form-input js-example-basic-single"
-                                name="select">
-                                <option value=""></option>
-                                <option value="1">Чешская Республика</option>
-                                <option value="2">Франция</option>
-                                <option value="3">Германия</option>
-                                <option value="4">Австрия</option>
-                                <option value="5">Литва</option>
-                                <option value="6">Латвия</option>
-                                <option value="7">Эстония</option>
-                              </select>
+                          <div class="crossborder__dropdown-mobile d-lg-none">
+                            <div class="crossborder__dropdown dropdown">
+                              <input type="hidden" id="sender_country_mobile" name="sender-country-mobile"
+                                value="Poland">
+                              <button
+                                class="heading-color crossborder__dropdown-btn crossborder__dropdown-poland dropdown-toggle text-left text-break"
+                                type="button" id="dropdownCountryButtonMobile" data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                Польша
+                              </button>
+                              <div class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                                aria-labelledby="dropdownCountryButtonMobile">
+                                <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item">Чешская
+                                  Республика</a>
+                                <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                                <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item">Германия</a>
+                                <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                                <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                                <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                                <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                                <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                                <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                                <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                                <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item">Ирландия</a>
+                                <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                              </div>
                             </div>
-                            <img src="img/banks/mastercard.png" alt="mastercard">
+                          </div>
+
+                          <!--                          <div class="form-group select-input-wrapper select-mobile d-lg-none" data-label="Польша">-->
+                          <!--                            <select class="select-search form-control form-input js-example-basic-single"-->
+                          <!--                              name="select">-->
+                          <!--                              <option value=""></option>-->
+                          <!--                              <option value="1">Чешская Республика</option>-->
+                          <!--                              <option value="2">Франция</option>-->
+                          <!--                              <option value="3">Германия</option>-->
+                          <!--                              <option value="4">Австрия</option>-->
+                          <!--                              <option value="5">Литва</option>-->
+                          <!--                              <option value="6">Латвия</option>-->
+                          <!--                              <option value="7">Эстония</option>-->
+                          <!--                            </select>-->
+                          <!--                          </div>-->
+
+                          <img src="img/banks/mastercard.png" alt="mastercard">
                         </div>
                         <div class="bank-card__body">
                           <div class="bank-card__number">
@@ -353,7 +412,7 @@
                           </div>
                         </div>
                         <div class="position-relative">
-                        <span class="px-2">Будет списано: <span>106.00 EUR</span>
+                        <span class="heading-color px-2">Будет списано: <span class="heading-color">106.00 EUR</span>
                           </span>
                           <a role="button" tabindex="-1"
                             class="transfer-card-button question-popover" data-toggle="popover"
@@ -515,7 +574,6 @@
                             </div>
                           </div>
                         </div>
-
                       </div>
                       <div class="row mt-4">
                         <div class="col-md-6">
@@ -769,7 +827,7 @@
       <div class="d-none d-lg-block">
         <div class="container">
           <div class="lorem-text">
-            <p>Lorem ipsum dolor sit amet:</p>
+            <p class="mb-0">Lorem ipsum dolor sit amet:</p>
             <ul class="list list--circle small--circle">
               <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
               <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -787,7 +845,8 @@
                 </ul>
               </li>
             </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et
               dolore
               magna aliqua. Semper auctor neque vitae tempus quam pellentesque. Ridiculus mus mauris vitae ultricies.
               Donec
